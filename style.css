@@ -1,0 +1,115 @@
+/* Cascating Stylesheet*/
+/* *=seletor universal*/
+* {
+  margin: 0;
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%); /*--grey=variavel*/
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif; /*primeira opcao=roboto, se nao tiver= sans-serif*/
+  -webkit-font-smothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 375px; /*largura //px=unidade de medida fixa*/
+  height: 812px;
+}
+
+.container {
+  /*maneira de chamar uma classe*/
+  max-width: 250px;
+  margin-left: auto; /*espacos laterais de uma caixa*/
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem; /* 1rem=16px//10rem=160px*/
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+.avatar span {
+  position: absolute; /*esse comando cria niveis de empilhamento nas imagens*/
+  top: -15px;
+
+  z-index: 1; /*eixo x=horizontal/ eixo y=vertical/ eixo z=profundidade em terceira dimensao(uma coisa mais perto que outra mais longe--neste caso mudou a profundidade do logo--estava atras e voltou para a frente*/
+  @keyframes loading;
+}
+
+.avatar > img {
+  /*sinal de maior significa que pega a primeira imagem e nao as duas */
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /*site onde posso encontrar as formas https://bennettfeely.com/clippy e criar o modelo que eu gostaria-copio s propriedades e colo aqui/*/
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animation {
+  animation: loading 8s linear infinite;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem; /*1.4rem=24px---1rem=16px*/
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none; /*tira a linha abaixo do link e ficou com cor cinza*/
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  /*flex deixa um elemento ao lado do outro no eixo x/eixo principal ou eixo main//// FLEX PEDE ALINHAMENTO CENTRAL = justify-content
+  posso usar o flex-direction p mudar p coluna por exemplo
+  flex-direction: columm;
+  o display: grid; trabalha em duas dimensoes---usafo no body*/
+  gap: 0.5rem;
+  /*espaco entre os icones */
+  justify-content: center;
+  /*centraliza os icones na reta
+  o text-align nao funciona, pq serve p textos ou elementos que recebem propriedades de texto*/
+}
+
+.icone {
+  fill: #333;
+}
+.icone:hover {
+  opacity: 0.5;
+}
