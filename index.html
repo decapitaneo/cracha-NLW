@@ -1,0 +1,125 @@
+<!--
+  ADD COMENTARIOS
+
+  HTML= 
+  hypertext - texto com links 
+  markup -marcacoes ou TAGS 
+  language - regras de uma linguagem
+
+  file auto save = salva automatico 
+  Abro meu arquivo em documents e clico com o botao D VIEW PAGE SOURCE = inspecionar o codigo fonte p ver se esta funcionando
+-->
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denise Capitaneo - DoWhile NLW-HEAT</title>
+    <!-- h1 = seletor, vai ser a referencia de todo h1 do meu html/regras serão aplicadas para todos -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!--content, pois esta contendo o resto das coisas
+            se eu quisesse criar uma classe container eu faria por exemplo p.container e daria um tab
+            <p class="container"></p> -->
+
+        <div class="avatar">
+          <span>
+            <img
+              class="animation"
+              src="images/build.svg"
+              alt="Selo branco da RocketSeat"
+            />
+          </span>
+
+          <!--source=onde esta a imagem
+                criei a pasta images...coloco images/nome da imagem
+                alt=texto alternativo p acessibilidade e motores de busca
+           <img
+           Antes de usar o poligono no CSS ajustei a imagem para o tamanho adequado/ nao mais necessario
+            width="160"
+            height="184"
+            top="184px"
+            left="108px"
+          
+            src="images/imagemDenise.jpeg"
+            alt="Foto pessoal de Denise Capitaneo"
+          />
+          -->
+          <img
+            src="images/imagemDenise.jpeg"
+            alt="Foto pessoal de Denise Capitaneo"
+            id="UserImage"
+          />
+        </div>
+
+        <h1 id="userName">Mayk Brito</h1>
+
+        <a id="userLink" href="https://github.com/maykbrito" target="_blank">
+          <img src="images/github.svg" alt="Icone do github" />
+          <span id="userLogin">maykbrito</span></a
+        >
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a
+              href="https://www.youtube.com/channel/UCj_MLDR9037n9yshbj-nKwA"
+              target="_blank"
+            >
+              <img class="icone" src="images/youtube.svg" alt="Icone Youtube" />
+              <!--target=blank abre uma nova aba e nao sobrepoe a atual/ nao adianta add na imagem/nao funciona
+                ALVO= nova aba-->
+            </a>
+          </li>
+          <li class="facebook">
+            <a
+              href="https://www.facebook.com/denise.capitaneo/"
+              target="_blank"
+            >
+              <img
+                class="icone"
+                src="images/facebook.svg"
+                alt="Icone facebook"
+              />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com/decapitaneo" target="_blank">
+              <img
+                class="icone"
+                src="images/instagram.svg"
+                alt="Icone instagram"
+              />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/home" target="_blank">
+              <img class="icone" src="images/twitter.svg" alt="Icone twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- a= hyperlink 
+          href = atributo/ referencia interna ou externa 
+          id= atributo de identificador  
+          "myId"= atributo de valor 
+          /id="myId"/-->
+
+    <script src="main.js"></script>
+  </body>
+</html>
